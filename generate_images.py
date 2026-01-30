@@ -9,6 +9,18 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 import os
+import sys
+
+# Constants
+TOP_N_FEATURES = 10  # Number of top features to display in charts
+OUTPUT_DPI = 150  # Resolution for output images (150 DPI provides good quality for documentation)
+
+# Color palette for risk levels (consistent across all visualizations)
+RISK_COLORS = {
+    'High': '#d62728',      # Red
+    'Moderate': '#ff7f0e',  # Orange
+    'Low': '#2ca02c'        # Green
+}
 
 # Set style
 sns.set_style("whitegrid")
@@ -19,37 +31,50 @@ plt.rcParams['font.size'] = 10
 os.makedirs('images', exist_ok=True)
 
 print("Loading data...")
-# Load the CSV files
-df_coefficients = pd.read_csv('CZR_Model_Coefficients.csv')
-df_forecast = pd.read_csv('CZR_2026_Flood_Forecast.csv')
 
-# 1. Feature Importance Chart (Top 10)
+# Check if required CSV files exist
+required_files = ['CZR_Model_Coefficients.csv', 'CZR_2026_Flood_Forecast.csv']
+for filename in required_files:
+    if not os.path.exists(filename):
+        print(f"Error: Required file '{filename}' not found!")
+        print("Please ensure the CSV files are in the current directory.")
+        sys.exit(1)
+
+# Load the CSV files
+try:
+    df_coefficients = pd.read_csv('CZR_Model_Coefficients.csv')
+    df_forecast = pd.read_csv('CZR_2026_Flood_Forecast.csv')
+except Exception as e:
+    print(f"Error loading CSV files: {e}")
+    sys.exit(1)
+
+# 1. Feature Importance Chart (Top N)
 print("Generating feature importance chart...")
 fig, ax = plt.subplots(figsize=(12, 8))
-top_10 = df_coefficients.nlargest(10, 'Abs_Coefficient')
-colors = ['#d62728' if c > 0 else '#1f77b4' for c in top_10['Coefficient']]
-ax.barh(range(len(top_10)), top_10['Abs_Coefficient'], color=colors)
-ax.set_yticks(range(len(top_10)))
-ax.set_yticklabels(top_10['Feature'])
+top_n = df_coefficients.nlargest(TOP_N_FEATURES, 'Abs_Coefficient')
+colors = ['#d62728' if c > 0 else '#1f77b4' for c in top_n['Coefficient']]
+ax.barh(range(len(top_n)), top_n['Abs_Coefficient'], color=colors)
+ax.set_yticks(range(len(top_n)))
+ax.set_yticklabels(top_n['Feature'])
 ax.set_xlabel('Absolute Coefficient Value', fontsize=12, fontweight='bold')
-ax.set_title('Top 10 Feature Importance (Linear Regression Model)', fontsize=14, fontweight='bold')
+ax.set_title(f'Top {TOP_N_FEATURES} Feature Importance (Linear Regression Model)', fontsize=14, fontweight='bold')
 ax.invert_yaxis()
 ax.grid(axis='x', alpha=0.3)
 plt.tight_layout()
-plt.savefig('images/feature_importance.png', dpi=150, bbox_inches='tight')
+plt.savefig('images/feature_importance.png', dpi=OUTPUT_DPI, bbox_inches='tight')
 plt.close()
 print("✓ Saved: images/feature_importance.png")
 
 # 2. Feature Coefficients Chart (showing positive/negative with colors)
 print("Generating feature coefficients chart...")
 fig, ax = plt.subplots(figsize=(12, 8))
-top_features = df_coefficients.nlargest(10, 'Abs_Coefficient')
+top_features = df_coefficients.nlargest(TOP_N_FEATURES, 'Abs_Coefficient')
 colors = ['#2ca02c' if c > 0 else '#d62728' for c in top_features['Coefficient']]
 ax.barh(range(len(top_features)), top_features['Coefficient'], color=colors)
 ax.set_yticks(range(len(top_features)))
 ax.set_yticklabels(top_features['Feature'])
 ax.set_xlabel('Coefficient Value', fontsize=12, fontweight='bold')
-ax.set_title('Top 10 Feature Coefficients (Linear Regression Model)', fontsize=14, fontweight='bold')
+ax.set_title(f'Top {TOP_N_FEATURES} Feature Coefficients (Linear Regression Model)', fontsize=14, fontweight='bold')
 ax.axvline(x=0, color='black', linestyle='-', linewidth=0.8)
 ax.invert_yaxis()
 ax.grid(axis='x', alpha=0.3)
@@ -59,7 +84,7 @@ legend_elements = [Patch(facecolor='#2ca02c', label='Positive Impact'),
                    Patch(facecolor='#d62728', label='Negative Impact')]
 ax.legend(handles=legend_elements, loc='lower right')
 plt.tight_layout()
-plt.savefig('images/feature_coefficients.png', dpi=150, bbox_inches='tight')
+plt.savefig('images/feature_coefficients.png', dpi=OUTPUT_DPI, bbox_inches='tight')
 plt.close()
 print("✓ Saved: images/feature_coefficients.png")
 
@@ -67,14 +92,7 @@ print("✓ Saved: images/feature_coefficients.png")
 print("Generating 2026 flood severity forecast...")
 fig, ax = plt.subplots(figsize=(14, 6))
 months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-colors = []
-for _, row in df_forecast.iterrows():
-    if row['flood_risk_level'] == 'High':
-        colors.append('#d62728')
-    elif row['flood_risk_level'] == 'Moderate':
-        colors.append('#ff7f0e')
-    else:
-        colors.append('#2ca02c')
+colors = [RISK_COLORS[row['flood_risk_level']] for _, row in df_forecast.iterrows()]
 
 bars = ax.bar(months, df_forecast['predicted_flood_severity'], color=colors, alpha=0.8, edgecolor='black')
 ax.set_xlabel('Month (2026)', fontsize=12, fontweight='bold')
@@ -85,13 +103,13 @@ ax.grid(axis='y', alpha=0.3)
 
 # Add risk level labels
 from matplotlib.patches import Patch
-legend_elements = [Patch(facecolor='#d62728', label='High Risk'),
-                   Patch(facecolor='#ff7f0e', label='Moderate Risk'),
-                   Patch(facecolor='#2ca02c', label='Low Risk')]
+legend_elements = [Patch(facecolor=RISK_COLORS['High'], label='High Risk'),
+                   Patch(facecolor=RISK_COLORS['Moderate'], label='Moderate Risk'),
+                   Patch(facecolor=RISK_COLORS['Low'], label='Low Risk')]
 ax.legend(handles=legend_elements, loc='upper left')
 
 plt.tight_layout()
-plt.savefig('images/forecast_2026_severity.png', dpi=150, bbox_inches='tight')
+plt.savefig('images/forecast_2026_severity.png', dpi=OUTPUT_DPI, bbox_inches='tight')
 plt.close()
 print("✓ Saved: images/forecast_2026_severity.png")
 
@@ -121,7 +139,7 @@ labels = [l.get_label() for l in lines]
 ax1.legend(lines, labels, loc='upper left')
 
 plt.tight_layout()
-plt.savefig('images/forecast_2026_climate.png', dpi=150, bbox_inches='tight')
+plt.savefig('images/forecast_2026_climate.png', dpi=OUTPUT_DPI, bbox_inches='tight')
 plt.close()
 print("✓ Saved: images/forecast_2026_climate.png")
 
@@ -129,13 +147,12 @@ print("✓ Saved: images/forecast_2026_climate.png")
 print("Generating risk distribution chart...")
 fig, ax = plt.subplots(figsize=(10, 6))
 risk_counts = df_forecast['flood_risk_level'].value_counts()
-colors_map = {'High': '#d62728', 'Moderate': '#ff7f0e', 'Low': '#2ca02c'}
-colors = [colors_map[level] for level in risk_counts.index]
+colors = [RISK_COLORS[level] for level in risk_counts.index]
 wedges, texts, autotexts = ax.pie(risk_counts.values, labels=risk_counts.index, autopct='%1.1f%%',
                                     colors=colors, startangle=90, textprops={'fontsize': 12, 'fontweight': 'bold'})
 ax.set_title('2026 Flood Risk Distribution', fontsize=14, fontweight='bold')
 plt.tight_layout()
-plt.savefig('images/risk_distribution_2026.png', dpi=150, bbox_inches='tight')
+plt.savefig('images/risk_distribution_2026.png', dpi=OUTPUT_DPI, bbox_inches='tight')
 plt.close()
 print("✓ Saved: images/risk_distribution_2026.png")
 
