@@ -191,7 +191,7 @@ Lasso's L1 regularization doesn't eliminate features, indicating all variables c
 ### 4.4 Gradient Boosting (❌ Not Recommended)
 
 **Performance:**
-- Training R²: 0.99999999 (perfect fit - red flag)
+- Training R²: 1.0000 (perfect fit - red flag)
 - Test R²: 0.8491 (poor generalization)
 - Test RMSE: 4.941 (2x worse than linear)
 - Overfitting Gap: 15.1% (unacceptable)
