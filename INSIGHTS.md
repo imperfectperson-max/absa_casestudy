@@ -38,6 +38,8 @@ This document provides an in-depth analysis of flood risk patterns in the Wester
 - Outliers identified: [documented in notebook visualizations]
 - Treatment: Retained for analysis (represent genuine extreme events)
 
+![Outlier Detection](images/outlier_detection.png)
+
 ---
 
 ## 2. Exploratory Data Analysis (EDA)
@@ -52,6 +54,8 @@ This document provides an in-depth analysis of flood risk patterns in the Wester
 
 **Business Implication:**
 Winter months require 2-3x capital reserves compared to summer months.
+
+![Seasonal Patterns](images/seasonal_patterns.png)
 
 ### 2.2 Dam Level Dynamics
 
@@ -89,6 +93,8 @@ Temperature anomalies serve as early warning signals for unusual flood patterns.
 ## 3. Correlation Analysis
 
 ### Feature Correlation Matrix
+
+![Correlation Matrix](images/correlation_matrix.png)
 
 **Strong Positive Correlations (r > 0.5):**
 1. Precipitation ↔ Flood Risk: **0.92**

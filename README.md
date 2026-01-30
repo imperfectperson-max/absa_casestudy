@@ -52,17 +52,26 @@ Flood Severity = (Precipitation × Dam Level) / 100
 - **Key Variables:** Precipitation, temperature, humidity, dam levels
 - **Insight:** Identifies seasonal patterns and anomalies
 
-### 2. **Correlation Heatmap**
+### 2. **Seasonal Patterns Analysis**
+- **Purpose:** Visualize how climate variables vary across seasons
+- **Key Finding:** Winter months show highest precipitation and flood risk
+- **Application:** Seasonal risk assessment and pricing strategies
+
+![Seasonal Patterns](images/seasonal_patterns.png)
+
+### 3. **Correlation Heatmap**
 - **Purpose:** Reveal relationships between climate variables
 - **Key Finding:** Precipitation and dam levels show strongest correlation with flood risk
 - **Application:** Feature selection for predictive models
 
-### 3. **Multicollinearity Analysis (VIF)**
+![Correlation Matrix](images/correlation_matrix.png)
+
+### 4. **Multicollinearity Analysis (VIF)**
 - **Purpose:** Detect redundant features that could distort model coefficients
 - **Threshold:** VIF > 10 indicates problematic multicollinearity
 - **Outcome:** Ensures model interpretability and reliability
 
-### 4. **Feature Importance Chart**
+### 5. **Feature Importance Chart**
 - **Purpose:** Rank predictive power of climate variables
 - **Visualization:** Bar chart showing coefficient magnitudes
 
@@ -91,17 +100,19 @@ Flood Severity = (Precipitation × Dam Level) / 100
   2. Avg Dam Level: 2.54
   3. Dam Level MA3: 0.91 (absolute)
 
-### 5. **Outlier Detection Plots**
+### 6. **Outlier Detection Plots**
 - **Purpose:** Identify anomalous data points that could skew predictions
 - **Method:** Statistical analysis (Z-scores, IQR)
 - **Action:** Document outliers for data quality assessment
 
-### 6. **Predicted vs Actual Flood Risk**
+![Outlier Detection](images/outlier_detection.png)
+
+### 7. **Predicted vs Actual Flood Risk**
 - **Purpose:** Validate model performance
 - **Metrics:** R² score, RMSE, MAE
 - **Interpretation:** Close alignment indicates reliable predictions
 
-### 7. **2026 Flood Severity Distribution**
+### 8. **2026 Flood Severity Distribution**
 - **Purpose:** Forecast future flood patterns
 - **Categories:** Low, Moderate, High risk levels
 - **Application:** Strategic planning for insurance coverage
