@@ -96,7 +96,7 @@ df = pd.read_csv('CZR_2026_Flood_Forecast.csv')
 high_risk = df[df['flood_risk_level'] == 'High']
 print("Alert: High risk in months:", high_risk['month'].tolist())
 
-# Output: [6, 7] (June and July)
+# Output: [8] (August)
 ```
 
 ### Use Case 2: Calculate Premium Adjustments
@@ -275,7 +275,7 @@ plt.rcParams['figure.figsize'] = (12, 6)
 
 ### Immediate Actions
 
-1. **Review the forecasts:** Identify high-risk months (June, July)
+1. **Review the forecasts:** Identify high-risk month (August)
 2. **Calculate financial impact:** Use capital requirement formula
 3. **Communicate with stakeholders:** Share insights with underwriting team
 
@@ -316,7 +316,7 @@ plt.rcParams['figure.figsize'] = (12, 6)
 - [ ] Uploaded data file (xlsx)
 - [ ] Executed all cells successfully
 - [ ] Generated three CSV output files
-- [ ] Identified high-risk months (June, July)
+- [ ] Identified high-risk month (August)
 - [ ] Reviewed feature importance (precipitation, dam level)
 - [ ] Calculated premium adjustments for your use case
 - [ ] Read README.md for project overview

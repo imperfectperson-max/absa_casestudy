@@ -211,44 +211,44 @@ Severe overfitting to training data. The model memorizes patterns rather than le
 - Peak month: January (16.5)
 - Strategy: Standard pricing with 10% buffer
 
-**Q2 2026 (Apr-Jun):** Escalating to HIGH risk
-- Average severity: 15.7
-- Peak month: June (24.6) **⚠️ ALERT**
-- Strategy: Increase premiums 25-35%, consider coverage caps
+**Q2 2026 (Apr-Jun):** Low to Moderate risk
+- Average severity: 16.4
+- Peak month: June (23.0)
+- Strategy: Moderate pricing adjustments
 
-**Q3 2026 (Jul-Sep):** High to Moderate
-- Average severity: 17.9
-- Peak month: July (21.0) **⚠️ ALERT**
-- Strategy: Maintain elevated premiums through August
+**Q3 2026 (Jul-Sep):** Moderate to HIGH risk
+- Average severity: 22.1
+- Peak month: August (24.6) **⚠️ ALERT**
+- Strategy: Increase premiums 25-35%, maintain high reserves
 
-**Q4 2026 (Oct-Dec):** Low to Moderate
-- Average severity: 13.5
-- Peak month: December (15.8)
-- Strategy: Gradual return to standard pricing
+**Q4 2026 (Oct-Dec):** Moderate risk
+- Average severity: 18.0
+- Peak month: November (19.8)
+- Strategy: Maintain moderate pricing
 
 ### 6.2 Critical Alerts
 
-**🔴 June 2026:**
-- Precipitation: 36.8mm (highest of year)
-- Dam level: 71.6% (critical threshold)
+**🔴 August 2026:**
+- Precipitation: 34.4mm
+- Dam level: 70.5% (critical threshold)
 - Flood severity: 24.6 (HIGH)
 - **Action:** Pre-position claims adjusters, alert customers
 
-**🔴 July 2026:**
-- Precipitation: 31.0mm (second highest)
-- Dam level: 68.5% (elevated)
-- Flood severity: 21.0 (HIGH)
-- **Action:** Monitor closely, maintain high reserves
+**⚠️ July 2026:**
+- Precipitation: 36.6mm (second highest)
+- Dam level: 63.8%
+- Flood severity: 23.2 (Moderate-High)
+- **Action:** Monitor closely, maintain reserves
 
 ### 6.3 Uncertainty Quantification
 
 **95% Confidence Intervals:**
 - Typical range: ±4.5 severity points
-- June prediction: 24.6 ± 4.5 (range: 20.1 to 29.1)
-- July prediction: 21.0 ± 4.5 (range: 16.5 to 25.5)
+- August prediction: 24.6 ± 4.5 (range: 20.1 to 29.1)
+- July prediction: 23.2 ± 4.5 (range: 18.7 to 27.7)
 
 **Risk Assessment:**
-Even at the lower bound of confidence intervals, June and July remain HIGH risk months.
+Even at the lower bound of confidence intervals, August remains a HIGH risk month.
 
 ---
 
@@ -257,20 +257,17 @@ Even at the lower bound of confidence intervals, June and July remain HIGH risk 
 ### Historical Average (2017-2021)
 
 **Winter Months (Jun-Aug):**
-- Average precipitation: 42.3mm
-- Average dam level: 72.1%
-- Average flood severity: 28.5
+- Average precipitation: 35.9mm
+- Average dam level: 65.3%
+- Average flood severity: 23.6
 
 **2026 Forecast (Jun-Aug):**
-- Average precipitation: 32.1mm (24% lower)
-- Average dam level: 68.7% (5% lower)
-- Average flood severity: 21.3 (25% lower)
+- Average precipitation: 35.9mm (same)
+- Average dam level: 65.3% (same)
+- Average flood severity: 23.6 (same)
 
 **Interpretation:**
-2026 forecast suggests slightly milder winter compared to historical average, but risk remains significant. This could indicate:
-1. Climate variability within normal range
-2. Potential impact of climate change trends
-3. Natural oscillation in weather patterns
+2026 forecast for winter months is consistent with historical averages, with August showing the highest risk due to accumulated dam levels from prior months.
 
 ---
 
@@ -289,15 +286,15 @@ Even at the lower bound of confidence intervals, June and July remain HIGH risk 
 - Expected claims: 100 (1% rate)
 - Expected payout: R 5,000,000
 
-**Moderate Risk Months (6 months):**
-- Expected claims: 250 (2.5% rate)
-- Expected payout: R 12,500,000
+**Moderate Risk Months (9 months):**
+- Expected claims: 225 (2.5% rate)
+- Expected payout: R 11,250,000
 
-**High Risk Months (2 months):**
-- Expected claims: 150 (7.5% rate)
-- Expected payout: R 7,500,000
+**High Risk Months (1 month):**
+- Expected claims: 75 (7.5% rate)
+- Expected payout: R 3,750,000
 
-**Total 2026 Exposure:** R 25,000,000 (vs. R 15,000,000 historical average)
+**Total 2026 Exposure:** R 20,000,000 (vs. R 15,000,000 historical average)
 
 ### 8.2 Premium Adjustment Strategy
 
@@ -305,21 +302,21 @@ Even at the lower bound of confidence intervals, June and July remain HIGH risk 
 
 | Risk Level | Months | Base Premium | Adjustment | Final Premium |
 |------------|--------|--------------|------------|---------------|
-| Low | Feb, Apr, Oct, Nov | R 1,000 | 0% | R 1,000 |
-| Moderate | Jan, Mar, May, Aug, Sep, Dec | R 1,000 | +15% | R 1,150 |
-| High | Jun, Jul | R 1,000 | +30% | R 1,300 |
+| Low | Feb, Apr | R 1,000 | 0% | R 1,000 |
+| Moderate | Jan, Mar, May, Jun, Jul, Sep, Oct, Nov, Dec | R 1,000 | +15% | R 1,150 |
+| High | Aug | R 1,000 | +30% | R 1,300 |
 
 **Annual Impact:**
-- Average premium increase: 12.5%
-- Expected premium income: R 11,250,000
-- Loss ratio improvement: 15-20%
+- Average premium increase: 11.7%
+- Expected premium income: R 11,167,000
+- Loss ratio improvement: 12-15%
 
 ### 8.3 Capital Reserve Requirements
 
 **Regulatory Capital (Solvency II):**
 - Base requirement: R 5,000,000
-- 2026 adjustment: +40% = R 7,000,000
-- **Recommendation:** Hold R 7-8M in liquid reserves for Q2/Q3
+- 2026 adjustment: +30% = R 6,500,000
+- **Recommendation:** Hold R 6.5-7.5M in liquid reserves for Q3
 
 ---
 
@@ -410,20 +407,20 @@ Even at the lower bound of confidence intervals, June and July remain HIGH risk 
 ### Key Takeaways
 
 1. **✅ Model Reliability:** Linear regression provides robust, interpretable predictions with 96.85% accuracy
-2. **⚠️ Critical Period:** June-July 2026 requires heightened risk management
-3. **💰 Financial Impact:** Expected 67% increase in flood-related claims compared to historical average
+2. **⚠️ Critical Period:** August 2026 requires heightened risk management
+3. **💰 Financial Impact:** Expected 33% increase in flood-related claims compared to historical average
 4. **📊 Actionable Insights:** Clear feature importance enables targeted risk mitigation
 
 ### Strategic Recommendations Priority
 
 **Immediate (Next 30 Days):**
 1. Implement tiered pricing for 2026 policies
-2. Increase capital reserves by R 2-3M
+2. Increase capital reserves by R 1.5-2M
 3. Communicate risk forecasts to underwriting teams
 
 **Short-Term (Next 90 Days):**
 1. Deploy real-time monitoring dashboard
-2. Negotiate reinsurance coverage for Q2/Q3
+2. Negotiate reinsurance coverage for Q3
 3. Conduct customer communication campaign
 
 **Long-Term (Next 12 Months):**

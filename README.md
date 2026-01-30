@@ -121,21 +121,21 @@ The analysis evaluates five machine learning models:
 | February | 16.3 | 64.1 | 10.2 | Low |
 | March | 24.1 | 63.2 | 15.1 | Moderate |
 | April | 17.5 | 62.2 | 10.6 | Low |
-| May | 23.9 | 66.7 | 15.8 | Moderate |
-| June | 36.8 | 71.6 | 24.6 | High |
-| July | 31.0 | 68.5 | 21.0 | High |
-| August | 28.4 | 65.9 | 18.4 | Moderate |
-| September | 22.7 | 64.1 | 14.3 | Moderate |
-| October | 20.5 | 62.5 | 12.6 | Low |
-| November | 19.8 | 61.7 | 12.0 | Low |
-| December | 25.2 | 63.8 | 15.8 | Moderate |
+| May | 28.5 | 61.9 | 17.7 | Moderate |
+| June | 36.8 | 61.7 | 23.0 | Moderate |
+| July | 36.6 | 63.8 | 23.2 | Moderate |
+| August | 34.4 | 70.5 | 24.6 | High |
+| September | 24.9 | 71.6 | 18.5 | Moderate |
+| October | 25.9 | 70.4 | 18.2 | Moderate |
+| November | 28.2 | 69.4 | 19.8 | Moderate |
+| December | 23.1 | 68.2 | 16.1 | Moderate |
 
 ### Risk Alert: High-Risk Months
 
-**🔴 June & July 2026**
-- Highest precipitation levels (36.8mm and 31.0mm)
-- Elevated dam levels (71.6% and 68.5%)
-- Flood severity scores: 24.6 and 21.0
+**🔴 August 2026**
+- Highest flood severity: 24.6
+- Elevated dam levels (70.5%)
+- Substantial precipitation (34.4mm)
 - **Recommendation:** Increase capital reserves and monitor closely
 
 ---
@@ -143,18 +143,18 @@ The analysis evaluates five machine learning models:
 ## 💡 Business Recommendations
 
 ### 1. **Dynamic Pricing Strategy**
-- **Low Risk Months** (Feb, Apr, Oct, Nov): Standard pricing
-- **Moderate Risk Months** (Jan, Mar, May, Aug, Sep, Dec): 10-15% premium increase
-- **High Risk Months** (Jun, Jul): 25-35% premium increase or coverage restrictions
+- **Low Risk Months** (Feb, Apr): Standard pricing
+- **Moderate Risk Months** (Jan, Mar, May, Jun, Jul, Sep, Oct, Nov, Dec): 10-15% premium increase
+- **High Risk Months** (Aug): 25-35% premium increase or coverage restrictions
 
 ### 2. **Capital Allocation**
-- **Reserve Requirement:** Allocate 40% more capital for Q2/Q3 2026
+- **Reserve Requirement:** Allocate 40% more capital for Q3 2026
 - **Geographic Focus:** Prioritize Western Cape exposure management
-- **Reinsurance:** Consider excess-of-loss treaties for June-July period
+- **Reinsurance:** Consider excess-of-loss treaties for August period
 
 ### 3. **Risk Mitigation Actions**
-- **Customer Communication:** Alert high-risk policyholders 30 days in advance
-- **Claims Preparation:** Pre-position adjusters and resources for winter months
+- **Customer Communication:** Alert high-risk policyholders 30 days in advance of August
+- **Claims Preparation:** Pre-position adjusters and resources for late winter/early spring
 - **Data Enhancement:** Install additional rain gauges and dam sensors
 
 ### 4. **Model Improvement Roadmap**
