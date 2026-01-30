@@ -65,10 +65,31 @@ Flood Severity = (Precipitation × Dam Level) / 100
 ### 4. **Feature Importance Chart**
 - **Purpose:** Rank predictive power of climate variables
 - **Visualization:** Bar chart showing coefficient magnitudes
-- **Top Features:**
+
+**Complete Feature Coefficients Table:**
+
+| Feature | Coefficient | Abs_Coefficient |
+|---------|-------------|-----------------|
+| precipitation | 7.107913042307417 | 7.107913042307417 |
+| avg_dam_level | 2.5392888064229324 | 2.5392888064229324 |
+| dam_level_ma3 | -0.9098876104229588 | 0.9098876104229588 |
+| avg_temp | -0.8857125250285979 | 0.8857125250285979 |
+| air_pressure | -0.6233309206430603 | 0.6233309206430603 |
+| humidity | -0.41062107712220597 | 0.41062107712220597 |
+| wind_speed | -0.3459693302035819 | 0.3459693302035819 |
+| humidity_ma3 | -0.30914779086818645 | 0.30914779086818645 |
+| temp_range | -0.28879183840987027 | 0.28879183840987027 |
+| dam_level_lag1 | 0.2690398231165717 | 0.2690398231165717 |
+| capacity_utilization | -0.2111103681796154 | 0.2111103681796154 |
+| precipitation_ma3 | -0.17957734927337995 | 0.17957734927337995 |
+| month_sin | 0.09914160833745786 | 0.09914160833745786 |
+| month_cos | 0.09362753817016556 | 0.09362753817016556 |
+| precipitation_lag1 | 0.08354544522713477 | 0.08354544522713477 |
+
+**Top Features:**
   1. Precipitation: 7.11
   2. Avg Dam Level: 2.54
-  3. Dam Level MA3: -0.91
+  3. Dam Level MA3: 0.91 (absolute)
 
 ### 5. **Outlier Detection Plots**
 - **Purpose:** Identify anomalous data points that could skew predictions
@@ -91,13 +112,13 @@ Flood Severity = (Precipitation × Dam Level) / 100
 
 The analysis evaluates five machine learning models:
 
-| Model | Train RMSE | Test RMSE | Test R² | Test MAE | Overfitting |
-|-------|-----------|-----------|---------|----------|-------------|
-| **Linear Regression** | 0.543 | 2.257 | **0.9685** | 1.751 | 0.026 |
-| **Ridge Regression** | 0.642 | 2.338 | 0.9662 | 1.842 | 0.026 |
-| **Lasso Regression** | 0.670 | 2.348 | 0.9659 | 1.870 | 0.026 |
-| **Random Forest** | - | - | - | - | - |
-| **Gradient Boosting** | 0.0002 | 4.941 | 0.8491 | 3.631 | 0.151 |
+| Model | Train RMSE | Test RMSE | Train R² | Test R² | Test MAE | Overfitting Gap |
+|-------|-----------|-----------|----------|---------|----------|-----------------|
+| **Linear Regression** | 0.5434391077258082 | 2.2567676744637275 | 0.9947601381228127 | **0.9685124577308301** | 1.7510244788537517 | 0.026247680391982664 |
+| **Ridge Regression** | 0.641903582986798 | 2.3380593373805696 | 0.9926893218984979 | 0.9662031583889128 | 1.841695790389356 | 0.026486163509585103 |
+| **Lasso Regression** | 0.6702566220451898 | 2.3480838504165553 | 0.9920292297900828 | 0.9659127267683407 | 1.8703862115032612 | 0.026116503021742066 |
+| **Gradient Boosting** | 0.000219927102104876 | 4.940715959306317 | 0.9999999991418256 | 0.849080682385887 | 3.6310082887932205 | 0.15091931675593862 |
+| **Random Forest** | 0.6597322102296366 | 5.48301484530155 | 0.9922775796331329 | 0.8141323097253008 | 4.212690374019982 | 0.17814526990783208 |
 
 ### Model Selection Rationale
 
@@ -115,20 +136,20 @@ The analysis evaluates five machine learning models:
 
 ### Monthly Forecast Summary
 
-| Month | Precipitation (mm) | Dam Level (%) | Flood Severity | Risk Level |
-|-------|-------------------|---------------|----------------|------------|
-| January | 26.6 | 63.2 | 16.5 | Moderate |
-| February | 16.3 | 64.1 | 10.2 | Low |
-| March | 24.1 | 63.2 | 15.1 | Moderate |
-| April | 17.5 | 62.2 | 10.6 | Low |
-| May | 28.5 | 61.9 | 17.7 | Moderate |
-| June | 36.8 | 61.7 | 23.0 | Moderate |
-| July | 36.6 | 63.8 | 23.2 | Moderate |
-| August | 34.4 | 70.5 | 24.6 | High |
-| September | 24.9 | 71.6 | 18.5 | Moderate |
-| October | 25.9 | 70.4 | 18.2 | Moderate |
-| November | 28.2 | 69.4 | 19.8 | Moderate |
-| December | 23.1 | 68.2 | 16.1 | Moderate |
+| Year | Month | Precipitation (mm) | Avg Dam Level (%) | Predicted Flood Severity | Flood Risk Level |
+|------|-------|-------------------|-------------------|--------------------------|------------------|
+| 2026 | 1 | 26.61434729183268 | 63.21295190042169 | 16.485708513684575 | Moderate |
+| 2026 | 2 | 16.277945411520278 | 64.06030479346217 | 10.177884350929617 | Low |
+| 2026 | 3 | 24.101122125971884 | 63.22677502702936 | 15.139578375965499 | Moderate |
+| 2026 | 4 | 17.494150573150385 | 62.161699067333736 | 10.591399308142346 | Low |
+| 2026 | 5 | 28.460511054839692 | 61.888880440041916 | 17.666986052799917 | Moderate |
+| 2026 | 6 | 36.75724889674782 | 61.72212630548795 | 22.958435231662992 | Moderate |
+| 2026 | 7 | 36.623877932157214 | 63.76549503725588 | 23.19059741270337 | Moderate |
+| 2026 | 8 | 34.43114915472214 | 70.53194109527273 | 24.58285148545622 | High |
+| 2026 | 9 | 24.871088809842536 | 71.61031354054366 | 18.45549381029033 | Moderate |
+| 2026 | 10 | 25.860815137397417 | 70.38327885390288 | 18.227662647277263 | Moderate |
+| 2026 | 11 | 28.215974251839363 | 69.43903034009129 | 19.752562138979144 | Moderate |
+| 2026 | 12 | 23.1426885673237 | 68.1648507194592 | 16.063770021100403 | Moderate |
 
 ### Risk Alert: High-Risk Months
 
