@@ -342,7 +342,7 @@ severity = (precipitation * dam_level) / 100
 
 - **GitHub Issues:** Open an issue for bugs or feature requests
 - **GitHub Discussions:** Ask questions or share ideas
-- **Email:** risk-analytics@czr-insurance.com
+- *Note: CZR Insurance Group is a case study organization for this educational project*
 
 ### Useful Resources
 

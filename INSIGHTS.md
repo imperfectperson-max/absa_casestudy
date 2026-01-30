@@ -277,24 +277,28 @@ Even at the lower bound of confidence intervals, August remains a HIGH risk mont
 
 **Assumptions:**
 - Average flood claim: R 50,000
-- Policy count: 10,000 in Western Cape
-- Historical claim rate: 3% per year
+- Policy count: 10,000 in Western Cape  
+- Historical annual claim rate: 3% (300 claims/year)
+- Risk-adjusted rates are relative monthly risk, not absolute monthly claim rates
 
-**2026 Risk-Adjusted Projections:**
+**2026 Risk-Adjusted Annual Projections:**
 
-**Low Risk Months (4 months):**
-- Expected claims: 100 (1% rate)
-- Expected payout: R 5,000,000
+**Low Risk Months (2 months: Feb, Apr):**
+- Risk weight: 1.0×
+- Expected annual claims from these months: 40
+- Expected payout: R 2,000,000
 
-**Moderate Risk Months (9 months):**
-- Expected claims: 225 (2.5% rate)
-- Expected payout: R 11,250,000
+**Moderate Risk Months (9 months: Jan, Mar, May, Jun, Jul, Sep, Oct, Nov, Dec):**
+- Risk weight: 2.5×
+- Expected annual claims from these months: 280  
+- Expected payout: R 14,000,000
 
-**High Risk Months (1 month):**
-- Expected claims: 75 (7.5% rate)
-- Expected payout: R 3,750,000
+**High Risk Months (1 month: Aug):**
+- Risk weight: 7.5×
+- Expected annual claims from these months: 60
+- Expected payout: R 3,000,000
 
-**Total 2026 Exposure:** R 20,000,000 (vs. R 15,000,000 historical average)
+**Total 2026 Exposure:** R 19,000,000 (vs. R 15,000,000 historical average = 27% increase)
 
 ### 8.2 Premium Adjustment Strategy
 
@@ -308,7 +312,8 @@ Even at the lower bound of confidence intervals, August remains a HIGH risk mont
 
 **Annual Impact:**
 - Average premium increase: 11.7%
-- Expected premium income: R 11,167,000
+- Expected annual premium income: R 11,170,000
+- Total 2026 exposure: R 19,000,000
 - Loss ratio improvement: 12-15%
 
 ### 8.3 Capital Reserve Requirements
@@ -408,7 +413,7 @@ Even at the lower bound of confidence intervals, August remains a HIGH risk mont
 
 1. **✅ Model Reliability:** Linear regression provides robust, interpretable predictions with 96.85% accuracy
 2. **⚠️ Critical Period:** August 2026 requires heightened risk management
-3. **💰 Financial Impact:** Expected 33% increase in flood-related claims compared to historical average
+3. **💰 Financial Impact:** Expected 27% increase in flood-related claims compared to historical average
 4. **📊 Actionable Insights:** Clear feature importance enables targeted risk mitigation
 
 ### Strategic Recommendations Priority

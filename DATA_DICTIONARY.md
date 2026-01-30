@@ -408,12 +408,12 @@ Solution: Verify notebook version matches this data dictionary (v1.0+)
 
 ---
 
-## 9. Contact and Support
+## 📞 Contact and Support
 
 **Questions or Issues:**
 - Climate Risk Analytics Team - QYF Group 1
-- CZR Insurance Group
-- Email: risk-analytics@czr-insurance.com
+- CZR Insurance Group (Case Study)
+- *Note: This is an educational case study project*
 
 **Last Updated:** January 30, 2026  
 **Document Version:** 1.0  

@@ -209,7 +209,7 @@ plt.show()
 
 ### 6. 2026 Forecast Bar Chart
 **Shows:** Monthly severity scores  
-**Look for:** Peaks in June-July (high risk period)
+**Look for:** Peak in August (high risk period)
 
 ---
 
@@ -307,6 +307,7 @@ plt.rcParams['figure.figsize'] = (12, 6)
 - **Technical Issues:** Review troubleshooting section above
 - **Business Questions:** Consult INSIGHTS.md recommendations
 - **Data Questions:** See DATA_DICTIONARY.md for field definitions
+- *Note: CZR Insurance Group is a case study organization for this educational project*
 
 ---
 
