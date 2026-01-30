@@ -179,18 +179,25 @@ The analysis evaluates five machine learning models:
 
 ```
 absa_casestudy/
-├── Absa_CZR_Insurance_Flood_Prediction_Analysis.ipynb  # Main analysis notebook
-├── CZR_2026_Flood_Forecast.csv                         # Monthly predictions for 2026
-├── CZR_Model_Coefficients.csv                          # Feature importance rankings
-├── CZR_Model_Comparison.csv                            # Model performance metrics
-├── README.md                                            # This file
-├── INSIGHTS.md                                          # Detailed analysis findings
-└── DATA_DICTIONARY.md                                   # CSV field descriptions
+├── 📓 Absa_CZR_Insurance_Flood_Prediction_Analysis.ipynb  # Main analysis notebook
+├── 📊 CZR_2026_Flood_Forecast.csv                         # Monthly predictions for 2026
+├── 📊 CZR_Model_Coefficients.csv                          # Feature importance rankings
+├── 📊 CZR_Model_Comparison.csv                            # Model performance metrics
+├── 📖 README.md                                            # Project overview (this file)
+├── 📖 QUICKSTART.md                                        # Quick start guide (⚡ Start here!)
+├── 📖 INSIGHTS.md                                          # Detailed analysis findings
+├── 📖 DATA_DICTIONARY.md                                   # CSV field descriptions
+├── 📖 CONTRIBUTING.md                                      # Contribution guidelines
+└── 🔧 .gitignore                                           # Git ignore rules
 ```
 
 ---
 
 ## 🚀 Getting Started
+
+### ⚡ New Users Start Here!
+
+**👉 Read [QUICKSTART.md](QUICKSTART.md) for a step-by-step guide to running the analysis in 5 minutes!**
 
 ### Prerequisites
 
@@ -223,12 +230,28 @@ After running the notebook, you'll generate:
 - **CZR_Model_Coefficients.csv:** Feature importance analysis
 - **CZR_Model_Comparison.csv:** Model performance comparison
 
+**💡 For detailed field descriptions and usage examples, see [DATA_DICTIONARY.md](DATA_DICTIONARY.md)**
+
 ---
 
-## 📚 Additional Documentation
+## 📚 Documentation Guide
 
-- **[INSIGHTS.md](INSIGHTS.md):** Deep dive into analysis findings
-- **[DATA_DICTIONARY.md](DATA_DICTIONARY.md):** Field definitions for CSV outputs
+### 🎯 Which Document Should I Read?
+
+| Document | When to Use It | Reading Time |
+|----------|----------------|--------------|
+| **[QUICKSTART.md](QUICKSTART.md)** | First-time setup and running the analysis | 5 min |
+| **[README.md](README.md)** | Project overview and key insights (you are here) | 10 min |
+| **[INSIGHTS.md](INSIGHTS.md)** | Deep dive into findings and recommendations | 20 min |
+| **[DATA_DICTIONARY.md](DATA_DICTIONARY.md)** | Understanding CSV outputs and fields | 10 min |
+| **[CONTRIBUTING.md](CONTRIBUTING.md)** | Contributing to the project | 10 min |
+
+### 📖 Documentation Summary
+
+- **[QUICKSTART.md](QUICKSTART.md)** - Get started in 5 minutes with step-by-step instructions
+- **[INSIGHTS.md](INSIGHTS.md)** - Detailed analysis findings, model evaluation, and business recommendations
+- **[DATA_DICTIONARY.md](DATA_DICTIONARY.md)** - Complete field definitions, formulas, and usage examples for all CSV files
+- **[CONTRIBUTING.md](CONTRIBUTING.md)** - Guidelines for contributing code, models, or documentation
 
 ---
 
@@ -237,6 +260,8 @@ After running the notebook, you'll generate:
 **Climate Risk Analytics Team - QYF Group 1**  
 **Organization:** CZR Insurance Group  
 **Date:** January 30, 2026
+
+**Want to contribute?** See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines!
 
 ---
 
