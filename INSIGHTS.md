@@ -129,21 +129,25 @@ Temperature anomalies serve as early warning signals for unusual flood patterns.
 
 | Feature | Coefficient | Abs_Coefficient |
 |---------|-------------|-----------------|
-| precipitation | 7.107913042307417 | 7.107913042307417 |
-| avg_dam_level | 2.5392888064229324 | 2.5392888064229324 |
-| dam_level_ma3 | -0.9098876104229588 | 0.9098876104229588 |
-| avg_temp | -0.8857125250285979 | 0.8857125250285979 |
-| air_pressure | -0.6233309206430603 | 0.6233309206430603 |
-| humidity | -0.41062107712220597 | 0.41062107712220597 |
-| wind_speed | -0.3459693302035819 | 0.3459693302035819 |
-| humidity_ma3 | -0.30914779086818645 | 0.30914779086818645 |
-| temp_range | -0.28879183840987027 | 0.28879183840987027 |
-| dam_level_lag1 | 0.2690398231165717 | 0.2690398231165717 |
-| capacity_utilization | -0.2111103681796154 | 0.2111103681796154 |
-| precipitation_ma3 | -0.17957734927337995 | 0.17957734927337995 |
-| month_sin | 0.09914160833745786 | 0.09914160833745786 |
-| month_cos | 0.09362753817016556 | 0.09362753817016556 |
-| precipitation_lag1 | 0.08354544522713477 | 0.08354544522713477 |
+| precipitation | 7.108 | 7.108 |
+| avg_dam_level | 2.539 | 2.539 |
+| dam_level_ma3 | -0.910 | 0.910 |
+| avg_temp | -0.886 | 0.886 |
+| air_pressure | -0.623 | 0.623 |
+| humidity | -0.411 | 0.411 |
+| wind_speed | -0.346 | 0.346 |
+| humidity_ma3 | -0.309 | 0.309 |
+| temp_range | -0.289 | 0.289 |
+| dam_level_lag1 | 0.269 | 0.269 |
+| capacity_utilization | -0.211 | 0.211 |
+| precipitation_ma3 | -0.180 | 0.180 |
+| month_sin | 0.099 | 0.099 |
+| month_cos | 0.094 | 0.094 |
+| precipitation_lag1 | 0.084 | 0.084 |
+
+![Feature Importance Chart](images/feature_importance.png)
+
+![Feature Coefficients Chart](images/feature_coefficients.png)
 
 **Key Interpretations:**
 ```
@@ -229,6 +233,12 @@ Severe overfitting to training data. The model memorizes patterns rather than le
 ---
 
 ## 6. 2026 Forecast Analysis
+
+![2026 Monthly Flood Severity Forecast](images/forecast_2026_severity.png)
+
+![2026 Precipitation and Dam Level Forecast](images/forecast_2026_climate.png)
+
+![2026 Flood Risk Distribution](images/risk_distribution_2026.png)
 
 ### 6.1 Seasonal Risk Distribution
 
