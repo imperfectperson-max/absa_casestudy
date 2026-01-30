@@ -118,17 +118,37 @@ Temperature anomalies serve as early warning signals for unusual flood patterns.
 - **Overfitting Gap:** 2.6% (excellent)
 
 **Coefficients and Interpretation:**
+
+**Complete Feature Coefficients:**
+
+| Feature | Coefficient | Abs_Coefficient |
+|---------|-------------|-----------------|
+| precipitation | 7.107913042307417 | 7.107913042307417 |
+| avg_dam_level | 2.5392888064229324 | 2.5392888064229324 |
+| dam_level_ma3 | -0.9098876104229588 | 0.9098876104229588 |
+| avg_temp | -0.8857125250285979 | 0.8857125250285979 |
+| air_pressure | -0.6233309206430603 | 0.6233309206430603 |
+| humidity | -0.41062107712220597 | 0.41062107712220597 |
+| wind_speed | -0.3459693302035819 | 0.3459693302035819 |
+| humidity_ma3 | -0.30914779086818645 | 0.30914779086818645 |
+| temp_range | -0.28879183840987027 | 0.28879183840987027 |
+| dam_level_lag1 | 0.2690398231165717 | 0.2690398231165717 |
+| capacity_utilization | -0.2111103681796154 | 0.2111103681796154 |
+| precipitation_ma3 | -0.17957734927337995 | 0.17957734927337995 |
+| month_sin | 0.09914160833745786 | 0.09914160833745786 |
+| month_cos | 0.09362753817016556 | 0.09362753817016556 |
+| precipitation_lag1 | 0.08354544522713477 | 0.08354544522713477 |
+
+**Key Interpretations:**
 ```
 precipitation:      +7.108  (1mm increase → 7.1 point severity increase)
 avg_dam_level:      +2.539  (1% increase → 2.5 point severity increase)
 dam_level_ma3:      -0.910  (smoothing effect)
 avg_temp:           -0.886  (cooler = higher risk)
-temp_range:         -1.243  (larger range = lower risk counterintuitively)
-humidity:           +1.519  (1% increase → 1.5 point severity increase)
-wind_speed:         -0.562  (higher wind = lower accumulation)
-air_pressure:       -0.489  (lower pressure = storm systems)
-max_temp:           -0.896  (similar to avg_temp)
-min_temp:           +0.916  (warmer lows = increased moisture capacity)
+temp_range:         -0.289  (larger range = lower risk counterintuitively)
+humidity:           -0.411  (negative correlation in this model)
+wind_speed:         -0.346  (higher wind = lower accumulation)
+air_pressure:       -0.623  (lower pressure = storm systems)
 ```
 
 **Why Linear Regression Wins:**
