@@ -76,6 +76,9 @@ Flood Severity = (Precipitation × Dam Level) ÷ 100
 ![Time Series Analysis](images/Time_Series_Analysis.png)
 
 ---
+Ridge Regression: Gently penalizes correlated variables
+
+Lasso Regression: Aggressively eliminates redundant variables
 
 ## 🤖 Model Performance Comparison
 
