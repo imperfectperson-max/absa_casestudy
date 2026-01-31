@@ -234,12 +234,6 @@ Severe overfitting to training data. The model memorizes patterns rather than le
 
 ## 6. 2026 Forecast Analysis
 
-![2026 Monthly Flood Severity Forecast](images/forecast_2026_severity.png)
-
-![2026 Precipitation and Dam Level Forecast](images/forecast_2026_climate.png)
-
-![2026 Flood Risk Distribution](images/risk_distribution_2026.png)
-
 ### 6.1 Seasonal Risk Distribution
 
 **Q1 2026 (Jan-Mar):** Moderate risk
@@ -285,6 +279,16 @@ Severe overfitting to training data. The model memorizes patterns rather than le
 
 **Risk Assessment:**
 Even at the lower bound of confidence intervals, August remains a HIGH risk month.
+
+### 6.4 Forecast Visualizations
+
+The following visualizations provide a comprehensive view of the 2026 flood forecasts:
+
+![2026 Monthly Flood Severity Forecast](images/forecast_2026_severity.png)
+
+![2026 Precipitation and Dam Level Forecast](images/forecast_2026_climate.png)
+
+![2026 Flood Risk Distribution](images/risk_distribution_2026.png)
 
 ---
 
