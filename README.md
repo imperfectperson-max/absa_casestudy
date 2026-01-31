@@ -52,6 +52,8 @@ Flood Severity = (Precipitation × Dam Level) / 100
 - **Key Variables:** Precipitation, temperature, humidity, dam levels
 - **Insight:** Identifies seasonal patterns and anomalies
 
+![Seasonal Patterns](images/Time_Series_Analysis.png)
+
 ### 2. **Seasonal Patterns Analysis**
 - **Purpose:** Visualize how climate variables vary across seasons
 - **Key Finding:** Winter months show highest precipitation and flood risk
@@ -76,8 +78,6 @@ Flood Severity = (Precipitation × Dam Level) / 100
 - **Visualization:** Bar chart showing coefficient magnitudes
 
 ![Feature Importance](images/feature_importance.png)
-
-![Feature Coefficients](images/feature_coefficients.png)
 
 ### 6. **Outlier Detection Plots**
 - **Purpose:** Identify anomalous data points that could skew predictions
