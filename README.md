@@ -77,6 +77,29 @@ Flood Severity = (Precipitation × Dam Level) / 100
 
 ![Feature Importance](images/feature_importance.png)
 
+![Feature Coefficients](images/feature_coefficients.png)
+
+### 6. **Outlier Detection Plots**
+- **Purpose:** Identify anomalous data points that could skew predictions
+- **Method:** Statistical analysis (Z-scores, IQR)
+- **Action:** Document outliers for data quality assessment
+
+![Outlier Detection](images/outlier_detection.png)
+
+### 7. **Predicted vs Actual Flood Risk**
+- **Purpose:** Validate model performance
+- **Metrics:** R² score, RMSE, MAE
+- **Interpretation:** Close alignment indicates reliable predictions
+
+### 8. **2026 Flood Severity Distribution**
+- **Purpose:** Forecast future flood patterns
+- **Categories:** Low, Moderate, High risk levels
+- **Application:** Strategic planning for insurance coverage
+
+![2026 Flood Risk Distribution](images/risk_distribution_2026.png)
+
+---
+
 **Complete Feature Coefficients Table:**
 
 | Feature | Coefficient | Abs_Coefficient |
@@ -101,29 +124,6 @@ Flood Severity = (Precipitation × Dam Level) / 100
   1. Precipitation: 7.11
   2. Avg Dam Level: 2.54
   3. Dam Level MA3: 0.91 (absolute)
-
-![Feature Coefficients](images/feature_coefficients.png)
-
-### 6. **Outlier Detection Plots**
-- **Purpose:** Identify anomalous data points that could skew predictions
-- **Method:** Statistical analysis (Z-scores, IQR)
-- **Action:** Document outliers for data quality assessment
-
-![Outlier Detection](images/outlier_detection.png)
-
-### 7. **Predicted vs Actual Flood Risk**
-- **Purpose:** Validate model performance
-- **Metrics:** R² score, RMSE, MAE
-- **Interpretation:** Close alignment indicates reliable predictions
-
-### 8. **2026 Flood Severity Distribution**
-- **Purpose:** Forecast future flood patterns
-- **Categories:** Low, Moderate, High risk levels
-- **Application:** Strategic planning for insurance coverage
-
-![2026 Flood Risk Distribution](images/risk_distribution_2026.png)
-
----
 
 ## 🤖 Model Comparison
 
