@@ -59,7 +59,7 @@ Flood Severity = (Precipitation × Dam Level) ÷ 100
 3. 3-Month Dam Level Average (Impact Score: 0.91)  
 ![Absolute Value Feature Importance](images/feature_importance.png)
 Without absolute values
-![Feature Importance](images/feature_importance.png)
+![Feature Importance](linear_regression_best_features.png)
 
 ### 4. **Data Quality Check** ✅
 **What it shows:** Outlier detection across all measured variables  
