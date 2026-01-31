@@ -68,25 +68,20 @@ Flood Severity = (Precipitation × Dam Level) / 100
 
 ![Correlation Matrix](images/correlation_matrix.png)
 
-### 4. **Multicollinearity Analysis (VIF)**
-- **Purpose:** Detect redundant features that could distort model coefficients
-- **Threshold:** VIF > 10 indicates problematic multicollinearity
-- **Outcome:** Ensures model interpretability and reliability
-
-### 5. **Feature Importance Chart**
+### 4. **Feature Importance Chart**
 - **Purpose:** Rank predictive power of climate variables
 - **Visualization:** Bar chart showing coefficient magnitudes
 
 ![Feature Importance](images/feature_importance.png)
 
-### 6. **Outlier Detection Plots**
+### 5. **Outlier Detection Plots**
 - **Purpose:** Identify anomalous data points that could skew predictions
 - **Method:** Statistical analysis (Z-scores, IQR)
 - **Action:** Document outliers for data quality assessment
 
 ![Outlier Detection](images/outlier_detection.png)
 
-### 7. **Predicted vs Actual Flood Risk**
+### 6. **Predicted vs Actual Flood Risk**
 - **Purpose:** Validate model performance
 - **Metrics:** R² score, RMSE, MAE
 - **Interpretation:** Close alignment indicates reliable predictions
