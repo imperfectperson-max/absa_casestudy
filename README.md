@@ -52,7 +52,7 @@ Flood Severity = (Precipitation × Dam Level) / 100
 - **Key Variables:** Precipitation, temperature, humidity, dam levels
 - **Insight:** Identifies seasonal patterns and anomalies
 
-![Seasonal Patterns](images/Time_Series_Analysis.png)
+![Time Series Analysis](images/Time_Series_Analysis.png)
 
 ### 2. **Seasonal Patterns Analysis**
 - **Purpose:** Visualize how climate variables vary across seasons
