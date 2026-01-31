@@ -21,6 +21,8 @@ This repository contains a **comprehensive climate risk assessment** developed f
 | **Humidity** | 🟨 Medium | Indicates atmospheric saturation, contributing to flood conditions |
 | **Temperature Range** | 🟩 Low | Negative correlation - stable, cooler temperatures increase flood likelihood |
 
+**Note:**: Used 3-month moving averages for analysis (for precipitation, dam levels, and humidity specifically)
+
 ### 🌧️ Flood Definition & Severity Calculation
 
 **A flood event is identified when:**
