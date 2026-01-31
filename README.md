@@ -91,13 +91,6 @@ Flood Severity = (Precipitation × Dam Level) / 100
 - **Metrics:** R² score, RMSE, MAE
 - **Interpretation:** Close alignment indicates reliable predictions
 
-### 8. **2026 Flood Severity Distribution**
-- **Purpose:** Forecast future flood patterns
-- **Categories:** Low, Moderate, High risk levels
-- **Application:** Strategic planning for insurance coverage
-
-![2026 Flood Risk Distribution](images/risk_distribution_2026.png)
-
 ---
 
 **Complete Feature Coefficients Table:**
@@ -168,9 +161,13 @@ The analysis evaluates five machine learning models:
 | 2026 | 11 | 28.2 | 69.4 | 19.8 | Moderate |
 | 2026 | 12 | 23.1 | 68.2 | 16.1 | Moderate |
 
+### Forecast Visualizations
+
 ![2026 Monthly Flood Severity Forecast](images/forecast_2026_severity.png)
 
 ![2026 Precipitation and Dam Level Forecast](images/forecast_2026_climate.png)
+
+![2026 Flood Risk Distribution](images/risk_distribution_2026.png)
 
 ### Risk Alert: High-Risk Months
 
