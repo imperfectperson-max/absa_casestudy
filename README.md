@@ -62,7 +62,7 @@ Flood Severity = (Precipitation × Dam Level) ÷ 100
 **What it shows:** Outlier detection across all measured variables  
 **Key Finding:** Only one significant outlier detected (extreme flood event)  
 **Insight:** Data quality is excellent, making it reliable for predictive modeling  
-**One Outlier:"** on Flood Severity
+**One Outlier:** flood severity
 ![Outlier Detection](images/outlier_detection.png)
 
 ### 5. **Model Validation** ✔️
