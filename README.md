@@ -85,7 +85,9 @@ Flood Severity = (Precipitation × Dam Level) ÷ 100
 ![Time Series Analysis](images/Time_Series_Analysis.png)
 
 ---
+## Multicollinearity
 **Used for regularization techniques, respectively, used to prevent overfitting in linear models by adding a penalty to the loss function**
+
 Ridge Regression: Gently penalizes correlated variables
 Lasso Regression: Aggressively eliminates redundant variables
 
