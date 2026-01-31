@@ -51,11 +51,14 @@ Flood Severity = (Precipitation × Dam Level) ÷ 100
 ![Correlation Matrix](images/correlation_matrix.png)
 
 ### 3. **Predictor Importance Ranking** 📊
+**Absolute Coefficient Value** is a measure of how much the model's flood prediction changes when each input feature (like precipitation or dam level) changes by one unit.
 **What it shows:** Which variables most strongly influence flood predictions  
 **Top 3 Predictors:**  
 1. Precipitation (Impact Score: 7.11)  
 2. Average Dam Level (Impact Score: 2.54)  
 3. 3-Month Dam Level Average (Impact Score: 0.91)  
+![Absolute Value Feature Importance](images/feature_importance.png)
+Without absolute values
 ![Feature Importance](images/feature_importance.png)
 
 ### 4. **Data Quality Check** ✅
