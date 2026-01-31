@@ -86,6 +86,8 @@ Flood Severity = (Precipitation × Dam Level) / 100
 - **Metrics:** R² score, RMSE, MAE
 - **Interpretation:** Close alignment indicates reliable predictions
 
+![Predicted VS Actual](images/predicted_vs_actual.png)
+
 ---
 
 **Complete Feature Coefficients Table:**
