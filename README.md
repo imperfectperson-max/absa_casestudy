@@ -73,6 +73,7 @@ Flood Severity = (Precipitation × Dam Level) ÷ 100
 ### 6. **Historical Trends** 📜
 **What it shows:** Climate variable patterns over 5 years  
 **Insight:** Identifies recurring seasonal patterns and anomalies for risk assessment  
+**Note:** Red markers is when precipitation > 75% and avg dam level > 75%
 ![Time Series Analysis](images/Time_Series_Analysis.png)
 
 ---
